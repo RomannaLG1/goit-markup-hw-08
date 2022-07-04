@@ -1381,12 +1381,6 @@ img {
     margin-bottom: calc(-1 * var(--card-set-gap));
   }
 }
-@media screen and (min-width: 1200px) {
-  .portfolio {
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-top: calc(-1 * var(--card-set-gap));
-  }
-}
 
 .portfolio__flex {
   cursor: pointer;
