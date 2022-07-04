@@ -1,0 +1,71 @@
+.client__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: calc(-1 * var(--card-set-gap));
+	margin-top: calc(-1 * var(--card-set-gap));
+
+	@media (min-width: $tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: calc(-1 * var(--card-set-gap));
+		margin-top: calc(-1 * var(--card-set-gap));
+	}
+	@media screen and (min-width: $desktop) {
+		display: flex;
+		flex-wrap: nowrap;
+		margin-right: 0;
+		margin-top: 0;
+	}
+}
+
+.client__item {
+	flex-basis: calc(100% / 2 - var(--card-set-gap));
+	margin-right: var(--card-set-gap);
+	margin-top: var(--card-set-gap);
+
+	@media (min-width: $tablet) {
+		flex-basis: calc(100% / 3 - var(--card-set-gap));
+		margin-right: var(--card-set-gap);
+		margin-top: var(--card-set-gap);
+	}
+	@media screen and (min-width: $desktop) {
+		@include centeredFlex();
+		margin-top: 0;
+
+		&:not(:last-child) {
+			margin-right: var(--card-set-gap);
+		}
+	}
+}
+
+.client__link {
+	@include centeredFlex();
+
+	background-color: transparent;
+	outline: transparent;
+	border-radius: 4px;
+	width: 210px;
+	height: 92px;
+	border: 1px solid var(--icon-color);
+	border-radius: 4px;
+	cursor: pointer;
+	color: var(--icon-color);
+	transition: color var(--time-duration) var(--timing-function), border var(--time-duration) var(--timing-function);
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+		border: 1px solid var(--accent-color);
+	}
+
+	@media screen and (min-width: $tablet) {
+		width: 226px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 170px;
+	}
+}
+
+.client__icon {
+	fill: currentColor;
+}

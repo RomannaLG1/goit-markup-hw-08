@@ -1,0 +1,28 @@
+.page {
+	/* padding-top: 80px; */
+	font-family: "Roboto", sans-serif;
+	color: var(--primary-text-color);
+	background-color: var(--primare-bg-color);
+}
+
+.section {
+	padding: 60px 0;
+	@media screen and (min-width: $desktop) {
+		@include section(var(--section-set-gap), var(--section-set-gap), 0, 0);
+	}
+}
+
+.section__title {
+	margin: 0 0 var(--card-set-gap);
+	@include font(700, 28px, 33px, 0.03em, center, var(--title-text-color));
+	@media screen and (min-width: $desktop) {
+		margin: 0 0 50px;
+		@include font(700, 36px, 42px, 0.03em, center, var(--title-text-color));
+	}
+}
+
+.text {
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+}

@@ -1,0 +1,38 @@
+.upp__button {
+	position: fixed;
+	@include centeredFlex();
+	visibility: hidden;
+	opacity: 0;
+	
+	right: 2.5rem;
+	bottom: 1.2rem;
+	width: 65px;
+	height: 40px;
+	border: transparent;
+	background-color: var(--secondary-bg-color);
+	border-radius: 50%;
+	color: var(--primary-text-color);
+	cursor: pointer;
+		transition: box-shadow var(--time-duration) var(--timing-function), transform 400ms var(--timing-function),
+		background-color var(--time-duration) var(--timing-function), color 400ms var(--timing-function);
+        
+&:hover,
+&:focus {
+    background-color: var(--accent-color);
+	color: var(--primare-bg-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	transform: translateY(-4px);
+        }
+    }
+
+.upp__button[data-visible="true"] {
+	opacity: 1;
+	visibility: visible;
+}
+
+.upp__icon {
+	fill: currentColor;
+}
+
+
+

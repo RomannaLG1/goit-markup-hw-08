@@ -1,0 +1,51 @@
+.footer {
+	background-color: var(--hero-bg-color);
+	padding: 60px 0;
+}
+.footer__wrap {
+	text-align: center;
+	margin-bottom: var(--mobile-section-set-gap);
+	@media screen and (min-width: $desktop) {
+		text-align: left;
+	}
+}
+
+.footer-nav {
+	@include font(null, 14px, 24px, 0.03em, center, inherit);
+	font-style: normal;
+	@media screen and (min-width: $desktop) {
+		text-align: left;
+	}
+}
+
+.footer-nav__item:not(:last-child) {
+	
+
+	margin-bottom: 8px;
+	@media screen and (min-width: $desktop) {
+margin-bottom: 9px;
+}}
+
+.footer-nav__address {
+	color: var(--primare-bg-color);
+	transition: color var(--time-duration) var(--timing-function);
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.footer-nav__contact {
+	color: rgba(255, 255, 255, 0.6);
+	transition: color var(--time-duration) var(--timing-function);
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+.footer-tablet {
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		justify-content: space-around;
+	}
+}

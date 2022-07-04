@@ -1,0 +1,26 @@
+.logo {
+	display: inline-flex;
+	
+
+	font-family: "Raleway", sans-serif;
+	@include font(700, 24px, 28px, 0.03em, center, var(--accent-color));
+	
+	@media screen and (min-width: $desktop) {
+	@include font(700, 26px, 31px, 0.03em, null, var(--accent-color));
+	padding: 24px 0;
+	}
+	
+}
+
+.logo__header {
+	color: var(--secondary-accent-color);
+}
+
+.logo__footer {
+	color: var(--primare-bg-color);
+}
+
+.logo__down {
+	margin-bottom: 20px;
+	padding: 0;
+}

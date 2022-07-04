@@ -1,0 +1,41 @@
+
+
+
+@mixin centeredFlex2($ai, $jc, $fd, $fw, $gap) {
+	display: flex;
+	align-items: $ai;
+	justify-content: $jc;
+	flex-direction: $fd;
+	flex-wrap: $fw;
+	gap: $gap;
+}
+
+@mixin centeredFlex() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+@mixin font($fw, $fs, $lh, $ls, $ta, $c) {
+
+	font-weight: $fw;
+	font-size: $fs;
+	line-height: calc($lh / $fs);
+	letter-spacing: $ls;
+	text-align: $ta;
+	// font-family: $ff;
+	color: $c;
+}
+
+// @include font(500, 16px, 19px, 0.03em, center, var(--title-text-color))
+
+@mixin section($pt, $pb, $pl, $pr) {
+	padding-top: $pt;
+	padding-bottom: $pb;
+	padding-left: $pl;
+	padding-right: $pr;
+}
+
+
+

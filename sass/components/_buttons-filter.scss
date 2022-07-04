@@ -1,0 +1,61 @@
+.filter-nav__list {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-left: calc(-1 * 8px);
+	margin-top: calc(-1 * 15px);
+	margin-bottom: 40px;
+
+	@media screen and (min-width: $tablet) {
+		@include centeredFlex();
+		margin-left: 0;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	@media screen and (min-width: $desktop) {
+		
+		margin-bottom: 50px;
+	}
+}
+
+.filter-nav__item {
+	margin-left: 8px;
+	margin-top: 15px;
+	@media screen and (min-width: $tablet) {
+		margin-top: 0px;
+		margin-left: 0px;
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+}
+
+// .filter-nav__list .filter-nav__item + .filter-nav__item {
+// 	@media screen and (min-width: $tablet) {
+
+// 	margin-left: 8px;
+// 	}
+
+// }
+.filter-nav__btn {
+	display: block;
+	padding: 6px 22px;
+	border-radius: 4px;
+	border: transparent;
+	font-family: inherit;
+	@include font(500, 16px, 26px, 0.03em, center, var(--title-text-color));
+
+	background-color: var(--secondary-bg-color);
+	text-align: center;
+	cursor: pointer;
+
+	transition: background-color var(--time-duration) var(--timing-function),
+		color var(--time-duration) var(--timing-function), box-shadow var(--time-duration) var(--timing-function);
+
+	&:hover,
+	&:focus {
+		color: var(--primare-bg-color);
+		background-color: var(--accent-color);
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
+}

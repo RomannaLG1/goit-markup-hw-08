@@ -1,0 +1,68 @@
+.team {
+	background-color: var(--secondary-bg-color);
+}
+
+.team__list {
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		margin-left: calc(-1 * var(--card-set-gap));
+		margin-bottom: calc(-1 * var(--card-set-gap));
+	}
+	@media screen and (min-width: $desktop) {
+		display: flex;
+		flex-wrap: nowrap;
+		// align-items: baseline;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+}
+
+.team__item {
+	width: 100%;
+	&:not(:last-child) {
+		margin-bottom: var(--card-set-gap);
+	}
+	
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+
+	background-color: var(--primare-bg-color);
+
+	@media screen and (min-width: $tablet) {
+		width: 354px;
+		flex-basis: calc(100% / 2 - var(--card-set-gap));
+		margin-left: var(--card-set-gap);
+		// margin-bottom: var(--card-set-gap);
+	}
+	@media screen and (min-width: $desktop) {
+	width: 270px;
+	margin-left: 0;
+	margin-bottom: 0;
+	&:not(:last-child) {
+		margin-bottom: 0;
+	}
+	}
+}
+
+.team__list .team__item + .team__item {
+	@media screen and (min-width: $desktop) {
+	margin-left: var(--card-set-gap);
+	}
+	
+}
+
+.team__content {
+	padding: var(--card-set-gap) 32px 24px;
+	// padding: var(--card-set-gap) 32px;
+}
+
+.team__member {
+	margin: 0 0 10px;
+	@include font(500, 16px, 19px, 0.03em, center, var(--title-text-color));
+}
+.team__position {
+	margin-bottom: 16px;
+	@include font(null, 16px, 19px, 0.03em, center, inherit);
+}
