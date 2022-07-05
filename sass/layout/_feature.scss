@@ -6,19 +6,21 @@
 }
 
 .feature__list {
+	
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		flex-wrap: wrap;
+		@media screen and (max-width: 1199px) {
 		margin-left: calc(-1 * var(--card-set-gap));
 		margin-bottom: calc(-1 * var(--card-set-gap));
 	}
+}
+	
 	@media screen and (min-width: $desktop) {
-		display: flex;
+		
+		flex-wrap: nowrap;
 		justify-content: center;
 
-		flex-wrap: nowrap;
-		margin-left: 0;
-		margin-bottom: 0;
 	}
 }
 .feature-list__item {

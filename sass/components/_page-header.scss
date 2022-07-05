@@ -9,19 +9,23 @@
 	border-style: solid;
 	border-color: #ececec;
 }
-// .main-nav {
-// 	display: flex;
-// 	align-items: center;
-// }
+.main-nav {
+	display: flex;
+	align-items: center;
+	@media screen and (min-width: $mobile) {
+		min-height: 60px;
+		justify-content: space-between;
+	}
+}
 
-// .main-nav__wrap {
-// 	display: flex;
-// 	align-items: center;
-// }
+.main-nav__wrap {
+	display: flex;
+	align-items: center;
+}
 
 .site-nav {
 	
-	@media screen and (min-width: $mobile) {
+	@media screen and (max-width: $tablet) {
 	display: none;
 	}
 	@media screen and (min-width: $tablet) {
@@ -34,7 +38,7 @@
 
 .contacts-nav {
 	
-	@media screen and (min-width: $mobile) {
+	@media screen and (max-width: $tablet) {
 		display: none;
 		}
 	@media screen and (min-width: $tablet) {
@@ -43,17 +47,17 @@
 	}
 }
 
-// .site-nav .site-nav__item + .site-nav__item {
-// 	margin-left: 40px;
-// }
+.site-nav .site-nav__item + .site-nav__item {
+	margin-left: 40px;
+}
 
 .site-nav__link {
-	// display: block;
+	display: block;
 	position: relative;
 
-	// padding: 32px 0px;
-	@include font(500, 40px, 47px, 0.02em, null, var(--title-text-color));
-	// @include font(500, 14px, 16px, 0.02em, null, var(--title-text-color));
+	padding: 32px 0px;
+	// @include font(500, 40px, 47px, 0.02em, null, var(--title-text-color));
+	@include font(500, 14px, 16px, 0.02em, null, var(--title-text-color));
 
 	transition: color var(--time-duration) var(--timing-function);
 	&:hover,
@@ -62,11 +66,11 @@
 	}
 }
 .contacts-nav__link {
-	// @include centeredFlex();
+	@include centeredFlex();
 
-	// padding: 32px 0px;
-	// @include font(500, 14px, 16px, 0.02em, null, var(--primary-text-color));
-	@include font(500, 34px, 40px, 0.02em, null, var(--primary-text-color));
+	padding: 32px 0px;
+	@include font(500, 14px, 16px, 0.02em, null, var(--primary-text-color));
+	// @include font(500, 34px, 40px, 0.02em, null, var(--primary-text-color));
 
 	transition: color var(--time-duration) var(--timing-function);
 
@@ -76,13 +80,13 @@
 	}
 }
 
-// .contacts-nav .contacts-nav__item + .contacts-nav__item {
-// 	margin-left: 50px;
-// }
-// .contacts-nav__item {
-// 	@include centeredFlex();
+.contacts-nav .contacts-nav__item + .contacts-nav__item {
+	margin-left: 50px;
+}
+.contacts-nav__item {
+	@include centeredFlex();
 
-// }
+}
 
 .contact__icon {
 	margin-right: 10px;

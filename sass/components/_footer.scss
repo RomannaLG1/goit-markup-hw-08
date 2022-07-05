@@ -4,7 +4,10 @@
 }
 .footer__wrap {
 	text-align: center;
+	@media screen and (max-width: 1199px) {
 	margin-bottom: var(--mobile-section-set-gap);
+	}
+	
 	@media screen and (min-width: $desktop) {
 		text-align: left;
 	}
@@ -47,5 +50,6 @@ margin-bottom: 9px;
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		justify-content: space-around;
+		align-items: baseline;
 	}
 }

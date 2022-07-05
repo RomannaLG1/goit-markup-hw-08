@@ -3,6 +3,7 @@
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		flex-wrap: wrap;
+	
 
 		margin-left: calc(-1 * var(--card-set-gap));
 		margin-bottom: calc(-1 * var(--card-set-gap));
@@ -16,6 +17,7 @@
 	}
 
 	@media screen and (min-width: $tablet) {
+	
 		flex-basis: calc(100% / 2 - var(--card-set-gap));
 		margin-left: var(--card-set-gap);
 		margin-bottom: var(--card-set-gap);
@@ -23,14 +25,14 @@
 
 	@media screen and (min-width: $desktop) {
 		flex-basis: calc(100% / 3 - var(--card-set-gap));
-		margin-left: var(--card-set-gap);
-		margin-bottom: var(--card-set-gap);
+		
 	}
 
 	cursor: pointer;
 }
 .product__content {
-	// padding: 20px 24px;
+	flex-grow: 1;
+	padding: 20px 24px;
 
 	border-width: 0 1px 1px;
 	border-style: solid;
@@ -38,7 +40,7 @@
 }
 
 .product__title {
-	// margin: 0 0 4px;
+	margin: 0 0 4px;
 
 	font-weight: 700;
 	font-size: 18px;
@@ -54,7 +56,10 @@
 }
 
 .product {
-	display: block;
+	// display: block;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	transition: box-shadow var(--time-duration) var(--timing-function);
 	&:hover,
 	&:focus {

@@ -4,7 +4,10 @@
 
 	font-family: "Raleway", sans-serif;
 	@include font(700, 24px, 28px, 0.03em, center, var(--accent-color));
-	
+	padding: 15px 0;
+	@media screen and (min-width: $tablet) {
+		padding: 25px 0;
+	}
 	@media screen and (min-width: $desktop) {
 	@include font(700, 26px, 31px, 0.03em, null, var(--accent-color));
 	padding: 24px 0;
