@@ -8,6 +8,7 @@
 	transform: scale(1);
 	opacity: 1;
 	transition: opacity 500ms var(--timing-function), visibility var(--time-duration) var(--timing-function);
+	overflow-y: scroll;
 	&.is-hidden {
 		opacity: 0;
 		visibility: hidden;
@@ -21,6 +22,10 @@
 	left: 50%;
 
 	padding: 40px;
+	@media screen and (max-width: $mobile) {
+		width: 96vw;
+		height: 96vh;	
+	}
 	width: 450px;
 	height: 609px;
 
@@ -30,8 +35,10 @@
 
 	transform: translate(-50%, -50%) scale(1);
 	transition: transform var(--time-duration) var(--timing-function);
+
 	@media screen and (min-width: $desktop) {
-		width: 100%;
+		width: 528px;
+	height: 581px;
 	}
 	.backdrop.is-hidden & {
 		transform: translate(-50%, -50%) scale(1.1);
@@ -151,9 +158,17 @@
 
 .form__label--contract {
 	@include centeredFlex();
+	
 	margin-bottom: 30px;
 	@include font(null, 12px, 14px, 0.03em, null, var(--primary-text-color));
-	// @include font(null, 14px, 24px, 0.03em, null, var(--primary-text-color));
+	// @media screen and (max-width: 479px) {
+	// flex-wrap: wrap;
+	// justify-content: left;
+	// }	
+	@media screen and (min-width: $desktop) {
+	@include font(null, 14px, 24px, 0.03em, null, var(--primary-text-color));
+	}
+	
 }
 
 .checkbox {
@@ -167,6 +182,10 @@
 	margin-right: 7px;
 	width: 16px;
 	height: 15px;
+	@media screen and (max-width: 400px) {
+		width: 20px;
+		height: 15px;
+	}
 	background-color: transparent;
 	border: 2px solid var(--title-text-color);
 	border-radius: 3px;

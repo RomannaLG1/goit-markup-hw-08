@@ -1,5 +1,5 @@
 .page-header {
-	/* position: fixed; */
+	position: relative; 
 	width: 100%;
 	background-color: var(--primare-bg-color);
 	top: 0;
@@ -12,7 +12,7 @@
 .main-nav {
 	display: flex;
 	align-items: center;
-	@media screen and (min-width: $mobile) {
+	@media screen and (max-width: $tablet) {
 		min-height: 60px;
 		justify-content: space-between;
 	}
@@ -30,8 +30,11 @@
 	}
 	@media screen and (min-width: $tablet) {
 	display: flex;
-	margin-left: 93px;
+	margin-left: 88px;
 	position: relative;
+	}
+	@media screen and (min-width: $desktop) {
+		margin-left: 93px;
 	}
 
 }
@@ -41,7 +44,14 @@
 	@media screen and (max-width: $tablet) {
 		display: none;
 		}
-	@media screen and (min-width: $tablet) {
+		// @media screen and (min-width: $tablet) {
+		// display: flex;
+		// flex-direction: column;
+		// margin-left: auto;
+		// justify-content: flex-start;
+		
+		// }
+	@media screen and (min-width: $desktop) {
 	display: flex;
 	margin-left: auto;
 	}
@@ -67,17 +77,20 @@
 }
 .contacts-nav__link {
 	@include centeredFlex();
-
 	padding: 32px 0px;
 	@include font(500, 14px, 16px, 0.02em, null, var(--primary-text-color));
 	// @include font(500, 34px, 40px, 0.02em, null, var(--primary-text-color));
-
 	transition: color var(--time-duration) var(--timing-function);
-
 	&:hover,
 	&:focus {
 		color: var(--accent-color);
 	}
+	@media screen and (min-width: $tablet) {
+padding: 0;
+margin: 0;
+
+
+}
 }
 
 .contacts-nav .contacts-nav__item + .contacts-nav__item {
