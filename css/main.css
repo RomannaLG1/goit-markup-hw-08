@@ -1174,6 +1174,34 @@ img {
   fill: currentColor;
 }
 
+.mobile__site-nav-link {
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  -webkit-transition: color var(--time-duration) var(--timing-function);
+  transition: color var(--time-duration) var(--timing-function);
+}
+.mobile__site-nav-link:hover, .mobile__site-nav-link:focus {
+  color: var(--accent-color);
+}
+
+.mobile__contact-nav-link {
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  -webkit-transition: color var(--time-duration) var(--timing-function);
+  transition: color var(--time-duration) var(--timing-function);
+}
+.mobile__contact-nav-link:hover, .mobile__contact-nav-link:focus {
+  color: var(--accent-color);
+}
+
 .hero {
   max-width: 480px;
   height: 400px;
