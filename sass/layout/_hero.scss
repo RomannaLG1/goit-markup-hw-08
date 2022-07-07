@@ -18,7 +18,7 @@
 			url("../image/hero/m_hero@2x.jpg");
 	}
 
-	@media screen and (min-width: $tablet) {
+	@media screen and (min-width: 577px) {
 		max-width: 768px;
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 			url("../image/hero/t_hero@1x.jpg");
@@ -29,7 +29,7 @@
 		}
 	}
 
-	@media screen and (min-width: $desktop) {
+	@media screen and (min-width: 769px) {
 		max-width: 1600px;
 		height: 600px;
 		padding: 200px 0;
