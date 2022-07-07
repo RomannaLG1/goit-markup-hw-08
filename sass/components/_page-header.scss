@@ -44,8 +44,9 @@
 	@media screen and (max-width: $tablet) {
 		display: none;
 		}
-		// @media screen and (min-width: $tablet) {
+		// @media screen and (min-width: $tablet) and (max-width: 1199px) {
 		// display: flex;
+		
 		// flex-direction: column;
 		// margin-left: auto;
 		// justify-content: flex-start;
@@ -97,6 +98,11 @@ margin: 0;
 	margin-left: 50px;
 }
 .contacts-nav__item {
+	@media screen and (min-width: $tablet) {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	}
 	@include centeredFlex();
 
 }
