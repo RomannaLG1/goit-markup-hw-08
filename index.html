@@ -70,7 +70,7 @@
 						<use class="icon-close" href="./image/sprite-opt.svg#icon-mobile-close" data-menu-close></use>
 					</svg>
 				</button>
-				<!-- <div class="menu-container" data-menu>
+				<div class="menu-container" data-menu>
 					<ul class="mobile__site-nav list">
 						<li class="mobile__site-nav-item"><a href="" class="mobile__site-nav-link link">Студия</a></li>
 						<li class="mobile__site-nav-item"><a href="" class="mobile__site-nav-link link">Портфолио</a></li>
@@ -106,7 +106,7 @@
 							LinkedIn
 						</li>
 					</ul>
-				</div> -->
+				</div>
 			</div>
 		</header>
 
@@ -280,44 +280,50 @@
 						<li class="team__item">
 							<picture>
 								<source
-									srcset="./image/team_adptv/m_team-2@1x.jpg 450w, ./image/team_adptv/m_team-2@2x.jpg 900w"
+								media="(max-width:767px)"
+									srcset="./image/team_adptv/m_team-2@1x.jpg 1x,
+									 ./image/team_adptv/m_team-2@2x.jpg 2x"
 									type="image/jpeg"
-									media="(max-width:767px)"
-									sizes="100vw"
+																		
 								/>
 
 								<source
-									srcset="./image/team_adptv/t_team-2@1x.jpg 354w, ./image/team_adptv/t_team-2@2x.jpg 708w"
+								media="(min-width:768px) and (min-width:1199px)"
+									srcset="./image/team_adptv/t_team-2@1x.jpg 1x, 
+									./image/team_adptv/t_team-2@2x.jpg 2x"
 									type="image/jpeg"
-									media="(min-width:768px)"
-									sizes="50vw"
+																		
 								/>
 
 								<source
-									srcset="./image/team_adptv/d_team-2@1x.jpg 270w, ./image/team_adptv/d_team-2@2x.jpg 540w"
+								media="(min-width:1200px)"
+									srcset="./image/team_adptv/d_team-2@1x.jpg 1x,
+									 ./image/team_adptv/d_team-2@2x.jpg 2x"
 									type="image/jpeg"
-									media="(min-width:1200px)"
-									sizes="25vw"
+									
+									
 								/>
 
 								<img src="./image/team/team-2.jpg" alt="Фото Ольги Репиной" width="270" class="team-img" />
 							</picture>
 
-							<!-- <picture>
-								<source
-									srcset="https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w"
-									media="()"
-									
-								/>
 
-								<source
-									srcset="https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w"
-									media="(min-width: 601px)"
-									sizes="(min-width: 800px) 800px, 100vw"
-								/>
 
-								<img src="https://picsum.photos/id/237/300/200" alt="Cute puppy" />
-							</picture> -->
+
+media="(min-width: 1200px)"
+srcset="
+ ..../portfolio-work-1-354w.webp   1x,
+ ..../portfolio-work-1-354w@2.webp 2x"
+
+media="(min-width: 768px)"
+srcset="
+ ..../portfolio-work-1-354w.webp   1x,
+ ..../portfolio-work-1-354w@2.webp 2x"
+
+media="(max-width: 767px)"
+srcset="
+..../portfolio-work-1-450w.webp   1x,
+..../portfolio-work-1-450w@2.webp 2x"
 
 							<div class="team__content">
 								<h3 class="team__member">Ольга Репина</h3>
@@ -646,7 +652,7 @@
 					<label class="form__label--contract">
 						<input class="checkbox" type="checkbox" name="checkbox" value="contract" />
 						<span class="contract__icon"></span>
-						Соглашаюсь с рассылкой и принимаю&nbsp
+						Соглашаюсь с рассылкой и принимаю&amp
 						<a href="" class="modal__link">Условия договора</a>
 					</label>
 

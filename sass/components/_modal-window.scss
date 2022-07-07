@@ -22,10 +22,7 @@
 	left: 50%;
 
 	padding: 40px;
-	@media screen and (max-width: $mobile) {
-		width: 96vw;
-		height: 96vh;	
-	}
+
 	width: 450px;
 	height: 609px;
 
@@ -35,6 +32,11 @@
 
 	transform: translate(-50%, -50%) scale(1);
 	transition: transform var(--time-duration) var(--timing-function);
+
+		@media screen and (max-width: 479px) {
+		width: 96vw;
+		height: 96vh;	
+	}
 
 	@media screen and (min-width: $desktop) {
 		width: 528px;
@@ -161,10 +163,11 @@
 	
 	margin-bottom: 30px;
 	@include font(null, 12px, 14px, 0.03em, null, var(--primary-text-color));
-	// @media screen and (max-width: 479px) {
-	// flex-wrap: wrap;
-	// justify-content: left;
-	// }	
+	@media screen and (max-width: 479px) {
+		display: inline-block;
+	flex-wrap: wrap;
+	justify-content: left;
+	}	
 	@media screen and (min-width: $desktop) {
 	@include font(null, 14px, 24px, 0.03em, null, var(--primary-text-color));
 	}
@@ -178,7 +181,7 @@
 
 .contract__icon {
 	align-self: auto;
-	display: inline-block;
+	// display: inline-block;
 	margin-right: 7px;
 	width: 16px;
 	height: 15px;

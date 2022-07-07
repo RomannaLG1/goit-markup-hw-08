@@ -800,7 +800,7 @@ img {
   transition: transform var(--time-duration) var(--timing-function);
   transition: transform var(--time-duration) var(--timing-function), -webkit-transform var(--time-duration) var(--timing-function);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .modal {
     width: 96vw;
     height: 96vh;
@@ -976,6 +976,16 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+@media screen and (max-width: 479px) {
+  .form__label--contract {
+    display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
 @media screen and (min-width: 1200px) {
   .form__label--contract {
     font-size: 14px;
@@ -995,7 +1005,6 @@ img {
 .contract__icon {
   -ms-flex-item-align: auto;
       align-self: auto;
-  display: inline-block;
   margin-right: 7px;
   width: 16px;
   height: 15px;
