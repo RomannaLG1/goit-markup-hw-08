@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<title>Студия</title>
+
 		<!-- Animate -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<!-- Fonts -->
@@ -28,7 +28,7 @@
 
 	<body class="page">
 		<!-- Верхняя линия -->
-		<header class="page-header">
+		<header class="page-header" >
 			<div class="container main-nav">
 				<nav class="main-nav__wrap">
 					<a href="./index.html" class="logo logo__up link" lang="en">
@@ -40,9 +40,7 @@
 						<li class="site-nav__item">
 							<a href="./index.html" class="site-nav__link link">Студия</a>
 						</li>
-						<li class="site-nav__item">
-							<a href="./portfolio.html" class="site-nav__link site-nav__link--current link">Портфолио</a>
-						</li>
+						<li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--current link">Портфолио</a></li>
 						<li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
 					</ul>
 				</nav>
@@ -66,6 +64,66 @@
 						</a>
 					</li>
 				</ul>
+
+				<!-- Mobile menu -->
+
+				<button type="button" class="menu-open-btn">
+					<svg class="mobile-icon-open" width="40" height="40" aria-label="Переключатель мобильного меню">
+						<use href="./image/sprite-opt.svg#icon-mobile-open"></use>
+					</svg>
+				</button>
+				<div class="mob-menu is-hidden">
+					<div class="mobile-container">
+						<div class="mobile-upp">
+							<button type="button" class="close-open-btn">
+								<svg class="mobile-icon-close" width="40" height="40" aria-label="Переключатель мобильного меню">
+									<use href="./image/sprite-opt.svg#icon-mobile-close"></use>
+								</svg>
+							</button>
+							<ul class="mobile__site-nav list">
+								<li class="mobile__site-nav-item">
+									<a href="./index.html" class="mobile__site-nav-link link">Студия</a>
+								</li>
+								<li class="mobile__site-nav-item">
+									<a href="./portfolio.html" class="mobile__site-nav-link mobile__site-nav-link--current link">Портфолио</a>
+								</li>
+								<li class="mobile__site-nav-item"><a href="" class="mobile__site-nav-link link">Контакты</a></li>
+							</ul>
+						</div>
+
+						<div class="mobile-bottom">
+							<ul class="mobile__contact-nav list">
+								<li class="mobile__contact-nav-item">
+									<a href="mailto:info@devstudio.com" class="mobile__contact-nav-link--mail  link">
+										info@devstudio.com
+									</a>
+								</li>
+								<li class="mobile__contact-nav-item">
+									<a href="tel:+380961111111" class="mobile__contact-nav-link--phone link">+38 096 111 11 11</a>
+								</li>
+							</ul>
+
+							<ul class="mobile__social-list list">
+								<li class="mobile__social-list-item">
+									<a href="" class="mobile__social-list-link link">Instagram</a>
+									
+								</li>
+								<li class="mobile__social-list-item">
+									<a href="" class="mobile__social-list-link link">Twitter</a>
+									
+								</li>
+								<li class="mobile__social-list-item">
+									<a href="" class="mobile__social-list-link link">Facebook</a>
+									
+								</li>
+								<li class="mobile__social-list-item">
+									<a href="" class="mobile__social-list-link link">LinkedIn</a>
+									
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 
@@ -562,5 +620,6 @@
 				</svg>
 			</a>
 		</div> -->
+		<script src="./js/mobile.js"></script>
 	</body>
 </html>
