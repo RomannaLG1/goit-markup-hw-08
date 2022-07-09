@@ -180,6 +180,9 @@ img {
   }
 }
 
+.contacts-nav {
+  margin-left: auto;
+}
 @media screen and (max-width: 768px) {
   .contacts-nav {
     display: none;
@@ -190,7 +193,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: auto;
   }
 }
 
@@ -243,39 +245,73 @@ img {
   }
 }
 
-.contacts-nav .contacts-nav__item + .contacts-nav__item {
-  margin-left: 50px;
+.contacts-nav__item {
+  padding: 5px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-nav__item {
+    padding: 32px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contacts-nav__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-nav__item:not(:last-child) {
+    margin-right: 30px;
+    padding: 32px 0;
+  }
 }
 
 .contacts-nav__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .contacts-nav__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .contact__icon {
-  margin-right: 10px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  .contact__icon:hover, .contact__icon:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.contact__icon--tablet {
+  margin-right: 8px;
   fill: currentColor;
 }
-.contact__icon:hover, .contact__icon:focus {
+.contact__icon--tablet:hover, .contact__icon--tablet:focus {
   fill: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon--tablet {
+    display: none;
+  }
 }
 
 .site-nav__link--current {
