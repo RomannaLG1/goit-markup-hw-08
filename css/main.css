@@ -874,7 +874,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 8px;
+  top: 25px;
   right: 8px;
   height: 30px;
   width: 30px;
@@ -890,6 +890,11 @@ img {
 }
 .modal__btn-close:hover, .modal__btn-close:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .modal__btn-close {
+    top: 8px;
+  }
 }
 
 .modal__icon-close {

@@ -50,7 +50,7 @@
 .modal__btn-close {
 	position: absolute;
 	@include centeredFlex();
-	top: 8px;
+	top: 25px;
 	right: 8px;
 	height: 30px;
 	width: 30px;
@@ -66,6 +66,10 @@
 	&:focus {
 		color: var(--accent-color);
 	}
+
+@media screen and (min-width: $mobile) {
+	top: 8px;
+}
 }
 .modal__icon-close {
 	fill: currentColor;
