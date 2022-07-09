@@ -163,14 +163,20 @@
 }
 
 .form__label--contract {
+	display: flex;
+flex-wrap: wrap;
+	justify-content:flex-start;
+	align-items: center;
+	max-width: 220px;
+margin-bottom: 30px;
+// display: block;
+	
+	@include font(null, 12px, 14px, 0.03em, null, var(--primary-text-color));
+	@media screen and (min-width: $mobile) {
+		// display: inline-block;
 	@include centeredFlex();
 	
-	margin-bottom: 30px;
-	@include font(null, 12px, 14px, 0.03em, null, var(--primary-text-color));
-	@media screen and (max-width: 479px) {
-		// display: inline-block;
-	flex-wrap: wrap;
-	justify-content: left;
+	
 	}	
 	@media screen and (min-width: $desktop) {
 	@include font(null, 14px, 24px, 0.03em, null, var(--primary-text-color));
@@ -189,10 +195,7 @@
 	margin-right: 7px;
 	width: 16px;
 	height: 15px;
-	// @media screen and (max-width: 400px) {
-	// 	width: 20px;
-	// 	height: 15px;
-	// }
+	
 	background-color: transparent;
 	border: 2px solid var(--title-text-color);
 	border-radius: 3px;
