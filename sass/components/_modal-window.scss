@@ -16,6 +16,10 @@
 	}
 }
 
+.no-scroll {
+	overflow: hidden;
+}
+
 .modal {
 	position: absolute;
 	top: 50%;
@@ -23,8 +27,8 @@
 
 	padding: 40px;
 
-	width: 100vw;
-	height: 100vh;
+	width: 310;
+	height: 595;
 
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -81,7 +85,10 @@
 	display: block;
 	margin-bottom: 12px;
 	@include font(700, 20px, 30px, 0.03em, center, var(--title-text-color));
-	// @include font(700, 20px, 23px, 0.03em, center, var(--title-text-color));
+	@media screen and (min-width: $desktop) {
+	@include font(700, 20px, 23px, 0.03em, center, var(--title-text-color));
+	}
+	
 }
 
 .form__label {
@@ -163,11 +170,12 @@
 }
 
 .form__label--contract {
-	display: flex;
-flex-wrap: wrap;
-	justify-content:flex-start;
-	align-items: center;
-	max-width: 220px;
+	display: inline-block;
+// 	display: flex;
+// flex-wrap: wrap;
+// 	justify-content:flex-start;
+// 	align-items: center;
+// 	max-width: 220px;
 margin-bottom: 30px;
 // display: block;
 	
@@ -179,6 +187,7 @@ margin-bottom: 30px;
 	
 	}	
 	@media screen and (min-width: $desktop) {
+
 	@include font(null, 14px, 24px, 0.03em, null, var(--primary-text-color));
 	}
 	
@@ -190,8 +199,9 @@ margin-bottom: 30px;
 }
 
 .contract__icon {
-	align-self: auto;
-	// display: inline-block;
+	// align-self: center;
+	display: inline-block;
+	vertical-align: middle;
 	margin-right: 7px;
 	width: 16px;
 	height: 15px;
