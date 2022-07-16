@@ -86,18 +86,20 @@
 		padding: 32px 0;
 		}
 }
-.contacts-nav__link--top {
+
+.contacts-nav__item:last-child .contacts-nav__link {
 	@media screen and (max-width: 1199px) {
-	padding-top: 15px;
-	}
-	
+			padding-bottom: 15px;
+			}
 }
-.contacts-nav__link--bottom {
+
+.contacts-nav__item:first-child .contacts-nav__link {
 	@media screen and (max-width: 1199px) {
-	padding-bottom: 15px;
-	}
-	
+			padding-top: 15px;
+			}
 }
+
+
 .contacts-nav__item {
 	
 	&:not(:last-child){

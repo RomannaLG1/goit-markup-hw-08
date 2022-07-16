@@ -48,4 +48,8 @@
 	margin-bottom: 20px;
 	@include font(700, 14px, 16px, 0.03em, center, var(--primare-bg-color));
 	text-transform: uppercase;
+	@media screen and (min-width: $desktop) {
+	text-align: left;
+	}
+	
 }
